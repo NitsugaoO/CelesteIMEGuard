@@ -15,14 +15,12 @@
 当前环境：Miaonet alpha 0.5.2，微信输入法。测试启动游戏后、打开聊天框一次前不再出现卡输入法的情况，在聊天框里中文输入法运作正常。
 
 ## 概述
-一个 "IMBlocker" 风格的 Celeste (Everest) mod：**游戏运行时自动摘除系统输入法 (IME)，进聊天框时自动恢复**，解决 Windows 中文输入法在 Celeste 启动后弹出候选框/干扰操作的问题。
+一个 Celeste (Everest) mod：**游戏运行时自动摘除系统输入法 (IME)，进聊天框时自动恢复**，解决 Windows 中文输入法在 Celeste 启动后弹出候选框/干扰操作的问题。
 
-> 灵感来自 Minecraft 的 [IMBlocker](https://github.com/reserveword/IMBlocker)（仅借鉴思路，代码为原创）。
+> 灵感来自 Minecraft 的 [IMBlocker](https://github.com/reserveword/IMBlocker)。
 
 > 📚 **开发者/回顾入口**：完整实现路径、踩坑记录、技术决策与未来改动指引见
 > [`docs/ARCHIVE.md`](docs/ARCHIVE.md)（根因分析、SDL/Everest 机制详解在 `docs/research/`）。
->
-> 注：本地研究用的反编译摘录（`docs/reference/`）**不随本仓库分发**（版权敏感）。
 
 ## 解决什么问题
 
@@ -55,8 +53,7 @@ CelesteIMEGuard/
 ├── src/                   # 源码工程 (net8.0)
 │   ├── CelesteIMEGuard.csproj
 │   └── IMEGuardModule.cs
-├── docs/                  # 开发文档（ARCHIVE / research）
-└── dist/                  # 发布产物（不入仓库，走 GitHub Release）
+└── docs/                  # 开发文档（ARCHIVE / research）
 ```
 
 打包结构（安装用 zip）：
@@ -84,7 +81,7 @@ cd src && dotnet build -p:CelesteDir="<你的 Celeste 目录>"
 把 `CelesteIMEGuard.zip` 放入 Celeste 安装目录的 `Mods/` 文件夹，重启游戏即可。
 
 > **前置要求**：需要先安装 [Everest](https://everestapi.github.io/)（Celeste mod 加载器）。
-> 推荐用 [Olympus](https://github.com/EverestAPI/Olympus) 管理 mod（可 1 键安装本 mod 的 zip）。
+> 推荐用 [CeleMod](https://github.com/std-microblock/CeleMod) 管理 mod。
 
 ## 卸载
 
