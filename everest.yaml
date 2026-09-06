@@ -1,0 +1,6 @@
+- Name: CelesteIMEGuard
+  Version: 1.0.0
+  DLL: Code/CelesteIMEGuard.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.0.0

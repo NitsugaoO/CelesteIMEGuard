@@ -1,0 +1,23 @@
+# ===== Build 产物 (可随时 dotnet build 重建) =====
+bin/
+obj/
+*.user
+
+# ===== 反编译摘录 (版权敏感, 不随源码开源) =====
+# 这些是从 Everest/MiaoNet/Celeste 反编译的参考材料,
+# 仅用于本地研究, 不适合公开分发。
+# 如确需保留研究价值, 请单独处理或仅保留自行撰写的分析文档。
+docs/reference/
+
+# ===== 发布产物 (体积大且走 GitHub Release) =====
+# 编译产物 / zip 都不进仓库, 统一在 GitHub Releases 提供
+# 如需重新打包: dotnet build + 按 dist/ 结构自行打 zip
+dist/
+
+# ===== 系统/编辑器 =====
+.DS_Store
+Thumbs.db
+.vs/
+.idea/
+.vscode/
+*.swp
